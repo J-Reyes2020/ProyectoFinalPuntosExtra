@@ -21,14 +21,7 @@ var recargo_total = 0
 //Precio final 
 var precio_final = 0
 
-var salir = "salir"
-
-
-salir = prompt("Desea salir", "salir/no");
-
-while(salir!="salir"){
-  //Mensajes de alerta para ingresar datos 
-
+//Mensajes de alerta para ingresar datos 
 var nombre = prompt("Ingrese su nombre, por favor")
 var edad = prompt("¿Cuantos años tiene? Ingrese solamente números ")
 if(edad<=17){
@@ -54,7 +47,7 @@ if(edad<=17){
     /**
      * 1. convierta la cantidad de hijos a numero
      */
-    if("si"==hijos.toUpperCase()){
+    if("SI"==hijos.toUpperCase()){
       cantidad_hijos=prompt("Cuántos hijos tiene?")
     }
     var edad_hijo = parseInt(cantidad_hijos)
@@ -105,15 +98,12 @@ if(edad<=17){
   var total_por_hijos = hijos_recargo * precio_base;
 
 
-  precio_final = precio_base + recargo_total + total_por_hijos;
+  precio_final = precio_base + recargo_total + (total_por_hijos*cantidad_hijos);
   //Resultado
   alert ("Para el asegurado "+nombre)
   alert ("El recargo total sera de: "+recargo_total)
   alert("El recargo total por el conyugue será de: " + recargo_total_conyugue)
   alert("El recargo total por los hijos será de: " + total_por_hijos)
   alert ("El precio sera de: "+precio_final)
-
 }
 alert("Nombre: Jorge Reyes \nCarnet: 23002239");
-
-}
